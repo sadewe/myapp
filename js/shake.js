@@ -117,11 +117,11 @@ function onSuccess(acceleration){
 	var bound = 7;
 	if(previousReading.x !== null){
 		changes.x = Math.abs(previousReading.x, acceleration.x);
-		changes.x = Math.abs(previousReading.y, acceleration.y);
-		changes.x = Math.abs(previousReading.z, acceleration.z);
+		changes.y = Math.abs(previousReading.y, acceleration.y);
+		changes.z = Math.abs(previousReading.z, acceleration.z);
 	}
 
-	if(changes.x > bound && changes.y > bound && changes > bound) {
+	if(changes.x > bound && changes.y > bound && changes.z > bound) {
 		shaken();
 	}
 	previousReading = {
@@ -137,7 +137,7 @@ function startWatch() {
 function shaken() {
 	stopWatch();
 	setTimeout(startWatch, 3000);
-	onShaken();
+	onShake();
 }
 
 function stopWatch(){

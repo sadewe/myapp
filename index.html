@@ -33,7 +33,7 @@
 			//Folgender Code wird ausgeführt, wenn eine Schüttelgeste vorliegt.
 			if(!geschuettelt) {
 				// CSS-Klasse austauschen und Bild einblenden
-				$(".flickr-bild").toggleClass('sichtbar');
+				$(".kamera-bild").toggleClass('sichtbar');
 				$('button').text("Neues Foto machen!").toggleClass("shakeit");
 				geschuettelt = true;
 			}
@@ -50,6 +50,7 @@
 	
 	// Eventhandler: Button
 	$('button').on('click', function() {
+		alert("click");
 		if(geschuettelt) {
 			polaroidweg();
 		} else {
@@ -93,7 +94,7 @@
 	//Altes Polaroid verschwinden lassen
 	var polaroidweg = function () {
 		
-		$(".flickr-bild").toggleClass('sichtbar');
+		$(".kamera-bild").toggleClass('sichtbar');
 		$(".polaroid-rahmen").toggleClass('sichtbar');
 		
 		$(".polaroid-rahmen").css('-webkit-transform', 'rotate('+(Math.floor(Math.random() * 180)-90)+'deg)');
