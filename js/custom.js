@@ -14,7 +14,7 @@ function takePicture(){
 }
 
 function onSuccess(imageURI){
-	var image = $("myImage");
+	var image = $(".myImage");
 	image.src = imageURI;
 }
 
