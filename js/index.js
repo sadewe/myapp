@@ -30,20 +30,29 @@ var app = {
     },
     // deviceready Event Handler
     //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicitly call 'app.receivedEvent(...);'
+    // The scope of 'this' is the event. In order to call the 'takePicture'
+    // function, we must explicitly call 'app.takePicture(...);'
     onDeviceReady: function() {
-        app.receivedEvent('deviceready');
+        app.takePicture();
     },
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
+    takePicture: function(){
+    $(".button--submit").bind("click", function(){
+        alert("Take a Picture");
 
-        console.log('Received Event: ' + id);
-    }
+        navigator.camera.getPicture(onSuccess, onFail, {
+            quality: 10,
+            destinationType: Camera.destinationType.FILE_URI
+        });
+    });
+}
+
+    onSuccess: function(imageURI){
+    var image = $(".myImage");
+    image.src = imageURI;
+}
+
+    onFail: function(message){
+    alert("Failed because: " + message);
+}
 };
