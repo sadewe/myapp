@@ -37,22 +37,22 @@ var app = {
     },
 
     takePicture: function(){
-    $(".button--submit").bind("click", function(){
-        alert("Take a Picture");
+        $(".button--submit").bind("click", function(){
+            alert("Take a Picture");
 
-        navigator.camera.getPicture(onSuccess, onFail, {
-            quality: 10,
-            destinationType: Camera.destinationType.FILE_URI
+            navigator.camera.getPicture(onSuccess, onFail, {
+                quality: 10,
+                destinationType: Camera.destinationType.FILE_URI
+            });
         });
-    });
-}
+    },
 
     onSuccess: function(imageURI){
-    var image = $(".myImage");
-    image.src = imageURI;
-}
+        var image = $(".myImage");
+        image.src = imageURI;
+    },
 
     onFail: function(message){
     alert("Failed because: " + message);
+    }
 }
-};

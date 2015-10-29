@@ -38,7 +38,6 @@
   <gap:plugin name="org.apache.cordova.vibration"/>
   <gap:plugin name="org.apache.cordova.camera" version="0.3.2" />
   <gap:plugin name="cordova-plugin-whitelist" source="npm" />
-  <gap:plugin name="this-npm-plugin" source="npm" version="1.0.0" />
   <gap:plugin name="phonegap-plugin-barcodescanner" source="npm" version="4.0.2" />
   <icon src="icon.png"/>
   <icon src="res/icon/android/icon-36-ldpi.png" gap:platform="android" gap:qualifier="ldpi"/>
