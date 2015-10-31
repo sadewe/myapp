@@ -1,5 +1,7 @@
 $(document).ready(function(){
+
     this.addEventListener('deviceready', onDeviceReady, false);
+    alert(onDeviceReady);
 });
 
     function onDeviceReady() {
@@ -8,7 +10,7 @@ $(document).ready(function(){
     }
 
     function takePicture(){
-        $(".button--submit").bind("click", function(){
+        $(".button--submit").on("click", function(){
             alert("Button was clicked");
             navigator.camera.getPicture(onSuccess, onFail, {
                 quality: 10,
