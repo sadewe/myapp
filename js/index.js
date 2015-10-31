@@ -1,9 +1,20 @@
 $(document).ready(function(){
-    this.addEventListener('deviceready', onDeviceReady(), false);
+    this.addEventListener('deviceready', onDeviceReady, false);
 });
 
     function onDeviceReady() {
+        alert("Ready");
         takePicture();
+    }
+
+    function takePicture(){
+        $(".button--submit").bind("click", function(){
+            alert("Button was clicked");
+            navigator.camera.getPicture(onSuccess, onFail, {
+                quality: 10,
+                destinationType: Camera.destinationType.FILE_URI
+            });
+        });
     }
     
     function takePicture(){
