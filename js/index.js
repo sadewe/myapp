@@ -10,6 +10,7 @@ $(document).ready(function(){
         $(".button--submit").bind("click", function(){
             alert("Button was clicked");
             navigator.camera.getPicture(onSuccess, onFail, {
+                alert("Camera");
                 quality: 10,
                 destinationType: Camera.destinationType.FILE_URI
             });
