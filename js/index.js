@@ -16,16 +16,6 @@ $(document).ready(function(){
             });
         });
     }
-    
-    function takePicture(){
-        $(".button--submit").bind("click", function(){
-            alert("Button was clicked");
-            navigator.camera.getPicture(onSuccess, onFail, {
-                quality: 10,
-                destinationType: Camera.destinationType.FILE_URI
-            });
-        });
-    }
 
     function onSuccess(imageURI){
         alert("imageURI: " + imageURI);
