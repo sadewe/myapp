@@ -11,8 +11,8 @@ $(document).ready(function(){
             alert("Button was clicked");
             navigator.camera.getPicture(onSuccess, onFail, {
                 quality: 10,
-                destinationType: Camera.DestinationType.FILE_URI,
-                sourceType: Camera.PictureSourceType.SAVEDPHOTOALBUM
+                destinationType: Camera.DestinationType.FILE_URI
+                /*sourceType: Camera.PictureSourceType.SAVEDPHOTOALBUM*/
             });
         });
     }
