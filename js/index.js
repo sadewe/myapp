@@ -12,7 +12,7 @@ $(document).ready(function(){
             navigator.camera.getPicture(onSuccess, onFail, {
                 quality: 10,
                 destinationType: Camera.DestinationType.FILE_URI,
-                sourceType: Camera.PictureSourceType.CAMERA
+                sourceType: Camera.PictureSourceType.SAVEDPHOTOALBUM
             });
         });
     }
