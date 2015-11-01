@@ -22,4 +22,7 @@
   </author>
   <gap:plugin name="cordova-plugin-camera" source="npm"/>
   <gap:plugin name="cordova-plugin-whitelist" source="npm" />
+
+  <allow-navigation href="data:*" />
+  <allow-navigation origin="*" />
 </widget>
