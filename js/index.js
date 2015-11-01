@@ -1,6 +1,31 @@
-$(document).ready(function(){
+var app = {
 
-    this.addEventListener('deviceready', onDeviceReady, false);
+    takePicture: function(){
+        $(".button--submit").on("click", function(){
+            alert("Button was clicked");
+            navigator.camera.getPicture(onSuccess, onFail, {
+                quality: 10,
+                destinationType: Camera.destinationType.FILE_URI
+            });
+        });
+    }, 
+
+    onSuccess: function(imageURI){
+        alert("imageURI: " + imageURI);
+        var image = $(".myImage");
+        image.src = imageURI;
+    },
+
+    onFail: function(message){
+    alert("Failed because: " + message);
+    }
+
+};
+
+
+/*$(document).ready(function(){
+
+    this.addEventListener('deviceready', this.onDeviceReady, false);
     alert(onDeviceReady);
 });
 
@@ -9,15 +34,7 @@ $(document).ready(function(){
         takePicture();
     }
 
-    function takePicture(){
-        $(".button--submit").on("click", function(){
-            alert("Button was clicked");
-            navigator.camera.getPicture(onSuccess, onFail, {
-                quality: 10,
-                destinationType: Camera.destinationType.FILE_URI
-            });
-        });
-    }
+
 
     function onSuccess(imageURI){
         alert("imageURI: " + imageURI);
@@ -27,4 +44,4 @@ $(document).ready(function(){
 
     function onFail(message){
     alert("Failed because: " + message);
-    }
+    }*/
