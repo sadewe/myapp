@@ -20,8 +20,6 @@
   <author href="http://www.wesade.com" email="wesade@wesade.com">
     Sarah
   </author>
-
-  <gap:plugin name="cordova-plugin-whitelist" source="npm" />
   <gap:plugin name="cordova-plugin-camera" source="npm"/>
-
+  <gap:plugin name="cordova-plugin-whitelist" source="npm" />
 </widget>
