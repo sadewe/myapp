@@ -18,7 +18,7 @@ $(document).ready(function(){
     }
 
     function onSuccess(imageURI){
-        var image = $(".myImage");
+        var image = document.getElementById('img');
         image.style.visibility = "visible";
         image.style.display = "block";
         image.src = imageURI;
