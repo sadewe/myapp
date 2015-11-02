@@ -13,7 +13,7 @@ $(document).ready(function(){
                 quality: 25,
                 destinationType: Camera.DestinationType.FILE_URI,
                 sourceType: Camera.PictureSourceType.CAMERA,
-                saveToPhotoAlnum: true
+                saveToPhotoAlbum: true
             });
         });
     }
