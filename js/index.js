@@ -8,7 +8,6 @@ $(document).ready(function(){
 
     function takePicture(){
         $(".button--submit").on("click", function(){
-            alert("Button was clicked");
             navigator.camera.getPicture(onSuccess, onFail, {
                 quality: 25,
                 destinationType: Camera.DestinationType.FILE_URI,
@@ -19,8 +18,8 @@ $(document).ready(function(){
     }
 
     function onSuccess(imageURI){
-        alert("Success");
         var image = $(".myImage");
+        alert(image);
         image.src = imageURI;
     }
 
