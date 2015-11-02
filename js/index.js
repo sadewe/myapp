@@ -10,10 +10,10 @@ $(document).ready(function(){
         $(".button--submit").on("click", function(){
             alert("Button was clicked");
             navigator.camera.getPicture(onSuccess, onFail, {
-                quality: 10,
+                quality: 25,
                 destinationType: Camera.DestinationType.FILE_URI,
+                sourceType: Camera.PictureSourceType.CAMERA,
                 saveToPhotoAlnum: true
-                /*sourceType: Camera.PictureSourceType.SAVEDPHOTOALBUM*/
             });
         });
     }
