@@ -19,6 +19,7 @@ $(document).ready(function(){
     }
 
     function onSuccess(imageURI){
+        alert("Success");
         var image = $(".myImage");
         image.src = imageURI;
     }
