@@ -21,6 +21,8 @@ $(document).ready(function(){
         var image = document.getElementById('img');
         image.style.visibility = "visible";
         image.style.display = "block";
+        image.style.width = "2rem";
+        image.style.height = "2rem;";
         image.src = imageURI;
     }
 
