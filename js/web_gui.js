@@ -7,10 +7,10 @@ $(document).ready(function(){
     }
 
     function takePicture(){
+        alert("1. n.c=" + typeof navigator.camera); 
+        alert("2. n.c.g=" + typeof navigator.camera.getPicture);
         $(".button--submit").on("click", function(){
             alert("click");
-            alert("1. n.c=" + typeof navigator.camera);
-            alert("2. n.c.g=" + typeof navigator.camera.getPicture);
             navigator.camera.getPicture(onSuccess, onFail, {
                 quality: 25,
                 destinationType: Camera.DestinationType.FILE_URI,
