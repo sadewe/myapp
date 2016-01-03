@@ -8,12 +8,17 @@ $(document).ready(function(){
 
     function takePicture(){
         $(".button--submit").on("click", function(){
+            alert("click");
+            alert("1. n.c=" + typeof navigator.camera);
+            alert("2. n.c.g=" + typeof navigator.camera.getPicture);
             navigator.camera.getPicture(onSuccess, onFail, {
                 quality: 25,
                 destinationType: Camera.DestinationType.FILE_URI,
                 sourceType: Camera.PictureSourceType.CAMERA,
                 saveToPhotoAlbum: true
             });
+            alert("5. n.c=" + typeof navigator.camera);
+            alert("6. n.c.g=" + typeof navigator.camera.getPicture);
         });
     }
 
