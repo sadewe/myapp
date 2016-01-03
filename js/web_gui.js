@@ -10,6 +10,8 @@ $(document).ready(function(){
         alert("1. n.c=" + typeof navigator.camera); 
         alert("2. n.c.g=" + typeof navigator.camera.getPicture);
         $(".button--submit").on("click", function(){
+            alert("3. n.c=" + typeof navigator.camera); 
+            alert("4. n.c.g=" + typeof navigator.camera.getPicture);
             alert("click");
             navigator.camera.getPicture(onSuccess, onFail, {
                 quality: 25,
